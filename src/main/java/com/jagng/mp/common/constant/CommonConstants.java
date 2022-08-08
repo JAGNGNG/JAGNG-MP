@@ -33,14 +33,13 @@ public interface CommonConstants {
     /**
      * 消息模板
      */
-    String TEXT_TEMPLATE = "早安 o(*^＠^*)o敏酱\n" +
+    String TEXT_TEMPLATE =
             "${date} ${week} \n" +
-            "今天是我们认识的第<span style=\"color:#FFB6C1\">${meetCount}</span>天,也是我们相恋的第<span style=\"color:#FF69B4\">${loveCount}</span>天" +
-            "距离你的生日还有<span style=\"color:#FA8072\">${birthdayCount}</span>天\n" +
-            "距离你的生日还有${birthdayCount}天\n" +
-            "今日天气 <span style=\"color:#FFA07A\">${wea}</span>\n" +
-            "白天温度(高温) <span style=\"color:#DC143C\">${tem_day}</span>度\n" +
-            "白天温度(低温) <span style=\"color:#8FBC8F\">${tem_night}</span>度\n" +
+            "第${meetCount}天,第${loveCount}天" +
+            "距离还有${birthdayCount}天\n" +
+            "今日天气 ${wea} \n" +
+            "白天温度(高温) ${tem_day}度\n" +
+            "白天温度(低温) ${tem_night}度\n" +
             "出门记得注意增减衣物╰(*°▽°*)╯\n" +
             "${note}\n" +
             "今天也要元气满满哦（づ￣3￣）づ╭❤～";
