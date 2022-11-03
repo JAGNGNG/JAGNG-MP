@@ -48,6 +48,9 @@ public class SendBiz {
         WxTemplateUtil.put(paramMap, "meetCount", DAYS.between(LocalDate.of(2021, 4, 10), LocalDate.now()) + "", "#9370D8");
         WxTemplateUtil.put(paramMap, "loveCount", DAYS.between(LocalDate.of(2021, 7, 24), LocalDate.now()) + "", "#FF69B4");
         ChineseDate chineseDate = new ChineseDate(LocalDate.now().getYear(), 9, 15);
+        if (DAYS.between(LocalDate.now(), chineseDate.getGregorianDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate())<0){
+            chineseDate = new ChineseDate(LocalDate.now().getYear()+1, 9, 15);
+        }
         WxTemplateUtil.put(paramMap, "birthdayCount", DAYS.between(LocalDate.now(), chineseDate.getGregorianDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate()) + "", "#FA8072");
         WxTemplateUtil.put(paramMap, "tem_day", tianQi.getTemDay(), "#DC143C");
         WxTemplateUtil.put(paramMap, "wea", tianQi.getWea(), "#FFA07A");
